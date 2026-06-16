@@ -7,6 +7,6 @@
 
 
 ## Feature Status
-### Task Creation- (Developer)
+### Task Creation- (Developer Abdulhameed)
 ### Task Completion- (Developer Angel)
-### Task Deletion- (Developer)
+### Task Deletion- (Developer Abdulgafar)
