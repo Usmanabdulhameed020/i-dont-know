@@ -10,16 +10,28 @@ function saveTodos() {
 
 function renderTodos() {
     todoList.innerHTML = '';
-    todos.forEach((todo) => {
+    todos.forEach((todo, index) => {
         const li = document.createElement('li');
         
         const span = document.createElement('span');
         span.textContent = todo.text;
         span.classList.add('todo-text');
 
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Delete';
+        deleteBtn.classList.add('delete-btn');
+        deleteBtn.onclick = () => deleteTodo(index);
+
         li.appendChild(span);
+        li.appendChild(deleteBtn);
         todoList.appendChild(li);
     });
+}
+
+function deleteTodo(index) {
+    todos.splice(index, 1);
+    saveTodos();
+    renderTodos();
 }
 
 function addTodo() {
